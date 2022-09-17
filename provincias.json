@@ -1,0 +1,10 @@
+[
+	{
+		"IdProvincia": 1,
+		"Descripcion": "San Jose"
+	},
+	{
+		"IdProvincia": 2,
+		"Descripcion": "Alajuela"
+	}
+]
