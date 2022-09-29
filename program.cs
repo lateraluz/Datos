@@ -10,8 +10,7 @@ using System.Net;
 /// Do not forget install Nuget Newtonsoft
 /// Based on https://zetcode.com/csharp/getpostrequest/
 /// </summary>
-namespace UTN.GithubJsonRequest.Consola
-{
+ 
     class Program
     {
         static void Main(string[] args)
@@ -68,4 +67,4 @@ namespace UTN.GithubJsonRequest.Consola
     }
 
 
-}
+ 
