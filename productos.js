@@ -1,4 +1,5 @@
-[{
+[[
+	{
 		"IdProduct": 1,
 		"ProductName": "Chai",
 		"IdWarehouse": 1,
@@ -768,5 +769,5 @@
 		"ReorderLevel": 15,
 		"Discontinued": false
 	}
-
+	 
 ]
