@@ -1,4 +1,4 @@
-[[
+ [
 	{
 		"IdCategory": 1,
 		"CategoryName": "Beverages",
@@ -39,4 +39,4 @@
 		"CategoryName": "Seafood",
 		"Description": "Seaweed and fish"
 	}
-]]
+]
