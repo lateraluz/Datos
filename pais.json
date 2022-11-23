@@ -1,0 +1,10 @@
+ [
+	{
+		"IdPais": "RUS",	 
+		"Description": "Rusia"
+	},
+	{
+		"IdPais": "UKR",	 
+		"Description": "Ucrania"
+	}	 
+]
