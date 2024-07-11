@@ -18,5 +18,13 @@
 	{
 		"IdProvincia": 5,
 		"Descripcion": "Guanacaste"
+	},
+	{
+		"IdProvincia": 6,
+		"Descripcion": "Puntarenas"
+	},
+	{
+		"IdProvincia": 7,
+		"Descripcion": "Limon"
 	}
 ]
