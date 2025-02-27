@@ -1,18 +1,22 @@
-using Newtonsoft.Json;
+/// <summary>
+/// Developed by L.  27-09-2022
+/// Updated          27-02-2024 (using System.Text.Json)  
+/// </summary>
+ 
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.Json;
 
-
-/// <summary>
-/// Developed by L.  27-09-2022
-/// Do not forget install Nuget Newtonsoft
-/// Based on https://zetcode.com/csharp/getpostrequest/
-/// </summary>
- 
-    class Program
+namespace appConsoleAPI
+{
+    internal class Program
     {
+        // Don't forget to import System.Text.Json from Nuget
         static void Main(string[] args)
         {
             string json = "";
@@ -25,19 +29,16 @@ using System.Net;
                 // Verb GET
                 request.Method = "GET";
 
-                using (WebResponse response = request.GetResponse())
+                // GetResponse returns a web response containing the response to the request
+                using (WebResponse webResponse = request.GetResponse())
                 {
-                    // GetResponse returns a web response containing the response to the request
-                    using (WebResponse webResponse = request.GetResponse())
-                    {
-                        // Reading data
-                        StreamReader reader = new StreamReader(webResponse.GetResponseStream());
-                        json = reader.ReadToEnd();
-                    }                   
+                    // Reading data
+                    StreamReader reader = new StreamReader(webResponse.GetResponseStream());
+                    json = reader.ReadToEnd();
                 }
 
                 // Desealizer List !!!
-                listaProvincias = JsonConvert.DeserializeObject<List<Provincia>>(json);
+                listaProvincias = JsonSerializer.Deserialize<List<Provincia>>(json);
 
                 Console.WriteLine($"Respuesta de {urlJSON}\n");
 
@@ -56,15 +57,13 @@ using System.Net;
             }
 
         }
+
+        public class Provincia
+        {
+            public int IdProvincia { get; set; }
+            public string Descripcion { get; set; }
+
+        }
+
     }
-
-
-    public class Provincia
-    {
-        public int IdProvincia { get; set; }
-        public string Descripcion { get; set; }
-
-    }
-
-
- 
+}
